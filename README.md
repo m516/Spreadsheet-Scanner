@@ -63,3 +63,11 @@ You might be wondering, *"What if `similarityThreshold` was something lower like
 Note that at this threshold, unique answers are flagged as matches.
 
 Generally speaking, the larger the response, the lower this threshold can be before flagging copies.
+
+
+## Acknowledgements
+I'd like to give a special thanks to all the developers who have generously donated their time to make these this project possible:
+
+* The [Python Software Foundation](https://www.python.org/)
+* The community behind the [Python-Levenshtein library](https://github.com/ztane/python-Levenshtein)
+* Eric Gazoni and Charlie Clark for the [openpyxl](https://openpyxl.readthedocs.io/en/stable/) library
