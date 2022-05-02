@@ -12,14 +12,14 @@ A simple Python script that compares cells of similar Excel spreadsheets. A poss
 5. Run the script. It may take a few minutes, so wait patiently.
 
 ## Example
-Alice, Bob, Carson, Dorothy, Edward, Frank, and Gertrude are all in the same class, graded on the most important question anyone can ask: "How many software developers does it take to change a lightbulb?" 
+A professor decided to quiz her students on the most the most important question anyone can ask: *"How many software developers does it take to change a lightbulb?"*. She carefully crafts her ingenious response in an Excel spreadsheet: *"Nine: one to change the lightbulb and the rest to complain about how the old one was better."*
 
-The professor decided it would be most logical to organize the assignment into a spreadsheet and conveniently provided an answer key for grading purposes: *"Nine: one to change the lightbulb and the rest to complain about how the old one was better"*. She then removes the answers and provides the file to her students as a template.
 ![](media/answerkey.jpg)
 
+Then she makes a template by copying of the answer key and removing the answer. She distributes the template to her seven students: Alice, Bob, Carson, Dorothy, Edward, Frank, and Gertrude for their final project, worth 75% of their grade.
 
-Most students in this class are very studious, hard workers, and come up with their own work, and some work is not original.
 
+Most students in this class are very studious, hard workers, and come up with their own work. However, not all their work is original.
 * **Alice** has a long-winded answer: *"It depends on the specs of the lightbulb and the competence of the software developer, so it must take several assumptions to create one definitive answer to this question. But generally speaking, it takes at least one software developer to change a lightbulb."* 
 * **Bob** works with Frank to come up with a different answer: *"None: that's a hardware issue."*
 * **Carson** thinks hard and finds the same answer as Bob and Frank. *"None. That's for the hardware folks."*
