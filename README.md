@@ -56,6 +56,10 @@ He runs the script, and within seconds he finds copies:
 
 ![At 90% similarity, two matches are detected](media/output_90p.jpg)
 
+The most obvious copies are displayed in an easy-to-read, color-coded format, showing the students' names and responses.
+
+Note that Frank's submission *wasn't* flagged as "similar" to Bob's submission. The tool could recognize that they worked together because they submitted the same assignment under the same names.
+
 You might be wondering, *"What if `similarityThreshold` was something lower like 60 percent?"* Well that's exactly what the grader thought, and great minds think alike. Here's an excerpt of the output:
 
 ![At 60% similarity, six matches are detected](media/output_60p.jpg)
