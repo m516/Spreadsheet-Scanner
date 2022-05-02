@@ -19,7 +19,7 @@ A professor decided to quiz her students on the most the most important question
 Then she makes a template by copying of the answer key and removing the answer. She distributes the template to her seven students: Alice, Bob, Carson, Dorothy, Edward, Frank, and Gertrude for their final project, worth 75% of their grade.
 
 
-Most students in this class are very studious, hard workers, and come up with their own work. However, not all their work is original.
+Most of the students are very studious, hard workers, and they come up with their own work. But not everyone's work was their own.
 * **Alice** has a long-winded answer: *"It depends on the specs of the lightbulb and the competence of the software developer, so it must take several assumptions to create one definitive answer to this question. But generally speaking, it takes at least one software developer to change a lightbulb."* 
 * **Bob** works with Frank to come up with a different answer: *"None: that's a hardware issue."*
 * **Carson** thinks hard and finds the same answer as Bob and Frank. *"None. That's for the hardware folks."*
