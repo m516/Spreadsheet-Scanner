@@ -5,7 +5,7 @@ Usage:
 1. Get Python, at least 3.10
 2. Get dependencies with python -m pip install levenshtein openpyxl
 3. Download all the submissions. The script can filter out any duplicates with the same values for the name cell.
-4. Place this script in that folder. Configure the options on lines 20-28 if need be
+4. Place this script in that folder. Configure the options on lines 20-50 if need be
 5. Run the script. It may take a few minutes.
 '''
 
@@ -16,17 +16,37 @@ from rapidfuzz.distance import Indel # Normalized Indel similarity between two s
  
 
 
+######################################################################################################################
+'''
+ _____              __ _                       _   _             
+/  __ \            / _(_)                     | | (_)            
+| /  \/ ___  _ __ | |_ _  __ _ _   _ _ __ __ _| |_ _  ___  _ __  
+| |    / _ \| '_ \|  _| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \ 
+| \__/\ (_) | | | | | | | (_| | |_| | | | (_| | |_| | (_) | | | |
+ \____/\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|
+                          __/ |                                  
+                         |___/                                   
+'''
 
-# Config
-path = os.getcwd()         # The path with all the spreadsheets is the current one
-nameCell = (1, "E2")       # 1st sheet, E2
-similarityThreshold = 0.6  # Must be a 60% match
+
+# The path with all the spreadsheets
+path = os.path.join(os.getcwd(), 'example') 
+
+# The cell with some unique identifier, like a name.
+# This is a tuple with the sheet number (starting at 1), followed by the cell location
+nameCell = (1, "B1")       # 1st sheet, B1
+
+# The similarity threshold, a value from 0 to 1.
+# The closer this value is to 1, the more picky the algorithm will be.
+# The closer it gets to 0, the more similarities you may find.
+similarityThreshold = 0.9  # Filter results to at least 90% similarity
+
+# A list of all the cells that have some answer that should be specific to each name.
+# Same structure as the name cell.
 cellsToCheck = [
-    (1, "A65"),            # 1st sheet, A65
-    # (1, "D43"),          # 1st sheet, D43
-    (4, "A90")             # 4th sheet, A90
+    (1, "A5")              # 1st sheet, A5
 ]
-
+#######################################################################################################################
 
 
 
@@ -82,11 +102,11 @@ hits = 0
 print_intro()
  
 # Get all Excel spreadsheets in a folder
-for x in os.listdir():
+for x in os.listdir(path):
     if x.endswith(".xlsx"): # For each spreadsheet
         # Open the workbook
         # wb = xlrd.open_workbook(x) # When the lab modernizes some day
-        wb = load_workbook(filename = x)
+        wb = load_workbook(filename = os.path.join(path, x))
 
         # Get the names of the students submitting
         name = wb.worksheets[nameCell[0]-1][nameCell[1]].value
@@ -135,7 +155,7 @@ for submission1 in dataToCheck:
 Names: 
     %s
     %s
-Location: %s
+Location:   %s
 Similarity: %s
 Response from %s:
     %s
